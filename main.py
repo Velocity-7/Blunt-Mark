@@ -2,7 +2,7 @@
 #Run this 'pip install hikari-lightbulb'
 import lightbulb
 
-bot = lightbulb.BotApp( token='Your Bot Token',
+bot = lightbulb.BotApp( tokren='Your Bot Token',
     default_enabled_guilds=(YOUR_GUID_ID))
     #This part is not required ^
     
