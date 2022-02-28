@@ -2,23 +2,26 @@
 #Run this 'pip install hikari-lightbulb'
 import lightbulb
 
-bot = lightbulb.BotApp(tokren='Your Bot Token',
+bot = lightbulb.BotApp(tokren='YOUR_BOT_TOKEN',
+#Required ^                       
     default_enabled_guilds=(YOUR_GUID_ID))
 #This part is not required ^
     
 @bot.command
-@lightbulb.command('ping', 'Says pong!')
+@lightbulb.command('ping', 'Your_Context_Field')
 @lightbulb.implements(lightbulb.SlashCommand)
 async def ping(ctx):
     await ctx.respond('Pong!')
 #Basic Slash command ^    
     
 @bot.command
-@lightbulb.command("embed", "Sends an embed in the command channel")
+@lightbulb.command("embed", "Your_Context_Field")
 @lightbulb.implements(lightbulb.SlashCommand)
 async def embed_command(ctx: lightbulb.Context) -> None:
-    embed = hikari.Embed(title="Like this bot?", description="[Click here to add this bot to your server](https://youtube.com)")
-    embed.set_thumbnail("https://i.imgur.com/EpuEOXC.jpg")
+    embed = hikari.Embed(title="Your_Title", description="Your_Description")
+    embed.add_field("Your_Field_Name", "Your_Field_Context")
+    embed.set_thumbnail("https:https://example.com/")
+    embed.set_footer("Your_Footer")
     await ctx.respond(embed)    
 #Embed ^
    
