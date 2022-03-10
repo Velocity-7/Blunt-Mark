@@ -1,5 +1,5 @@
-# BluntMark
-This branch contains the files for Blunt Mark Bot
+# Blunt Mark
+This branch contains the files for Blunt Mark Bot Python
 
 Hikari Official documentation: https://www.hikari-py.dev/hikari/
 
