@@ -4,7 +4,7 @@ import lightbulb
 
 bot = lightbulb.BotApp(tokren='YOUR_BOT_TOKEN',
 #Required ^                       
-    default_enabled_guilds=(YOUR_GUID_ID))
+    default_enabled_guilds=(YOUR_GUILD_ID))
 #This part is not required ^
     
 @bot.command
