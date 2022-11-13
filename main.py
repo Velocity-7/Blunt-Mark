@@ -2,10 +2,10 @@
 #Run this 'pip install hikari-lightbulb'
 import lightbulb
 
-bot = lightbulb.BotApp(tokren='YOUR_BOT_TOKEN',
+bot = lightbulb.BotApp(token='YOUR_BOT_TOKEN',
 #Required ^                       
     default_enabled_guilds=(YOUR_GUILD_ID))
-#This part is not required ^
+#This part is not required ^ (Only use for faster command loading in specific Guilds)
     
 @bot.command
 @lightbulb.command('ping', 'Your_Context_Field')
