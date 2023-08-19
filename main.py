@@ -1,7 +1,7 @@
 #Run 'python -m pip install -U hikari' before you start
 #Run 'pip install hikari-lightbulb' before you start
 
-import hikari, lightbulb
+import lightbulb
 
 bot = lightbulb.BotApp(token='YOUR_BOT_TOKEN',
 #Required ^                    
