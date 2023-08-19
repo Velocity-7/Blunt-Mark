@@ -1,4 +1,4 @@
-import lightbulb, hikari
+import hikari, lightbulb
 
 plugin = lightbulb.Plugin('basic_slash_command')
 
