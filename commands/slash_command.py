@@ -1,6 +1,6 @@
 import hikari, lightbulb
 
-plugin = lightbulb.Plugin('basic_slash_command')
+plugin = lightbulb.Plugin('slash_command')
 
 def load(bot):
   bot.add_plugin(plugin)

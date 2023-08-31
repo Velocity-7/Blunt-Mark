@@ -1,6 +1,6 @@
 import hikari, lightbulb
 
-plugin = lightbulb.Plugin('group')
+plugin = lightbulb.Plugin('group_command')
 
 def load (bot):
     bot.add_plugin(plugin)

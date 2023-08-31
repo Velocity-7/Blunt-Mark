@@ -1,6 +1,6 @@
 import hikari, lightbulb
 
-plugin = lightbulb.Plugin('embed')
+plugin = lightbulb.Plugin('embed_command')
 
 def load (bot):
     bot.add_plugin(plugin)
