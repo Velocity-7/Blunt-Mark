@@ -10,7 +10,7 @@ async def message(event):
   print(event.content)
 
 @plugin.command
-@lightbulb.command('your_command_name', 'your_command_description')
+@lightbulb.command('your_command_name', 'Your_Command_Description')
 @lightbulb.implements(lightbulb.SlashCommand)
 async def ping(ctx):
     await ctx.respond('Your_Command_Response')

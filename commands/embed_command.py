@@ -10,7 +10,7 @@ async def message(event):
   print(event.content) 
 
 @plugin.command
-@lightbulb.command('Your_Command_Field', 'Your_Context_Field')
+@lightbulb.command('your_command_field', 'Your_Context_Field')
 @lightbulb.implements(lightbulb.SlashCommand)
 async def embed_command(ctx: lightbulb.Context) -> None:
     embed = hikari.Embed(title='Your_Title', description='Your_Description')

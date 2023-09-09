@@ -10,13 +10,13 @@ async def message(event):
   print(event.content) 
 
 @plugin.command
-@lightbulb.command('Your_Group_Command_Field', 'Your_Group_Command_Context_Field')
+@lightbulb.command('your_group_command_field', 'Your_Group_Command_Context_Field')
 @lightbulb.implements(lightbulb.SlashCommandGroup)
 async def your_group_name(ctx):
   pass
 
 @your_group_name.child
-@lightbulb.command('Your_Sub_Command_Field', 'Your_Sub_Command_Context_Field')
+@lightbulb.command('your_sub_command_field', 'Your_Sub_Command_Context_Field')
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def embed_command(ctx: lightbulb.Context) -> None:
     embed = hikari.Embed(title='Your_Title', description='Your_Description')
@@ -26,7 +26,7 @@ async def embed_command(ctx: lightbulb.Context) -> None:
     await ctx.respond(embed)
 
 @your_group_name.child
-@lightbulb.command('Your_Sub_Command_Field', 'Your_Sub_Command_Context_Field')
+@lightbulb.command('your_sub_command_field', 'Your_Sub_Command_Context_Field')
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def ping(ctx):
     await ctx.respond('Your_Response')
