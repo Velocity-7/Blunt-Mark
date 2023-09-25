@@ -5,7 +5,7 @@ plugin = lightbulb.Plugin('modal')
 def load(bot):
     bot.add_plugin(plugin)
     miru.install(bot)
-#If you are creating mode the one modal only include the ||miru.install(bot)|| section in one command as it will not working if it is loaded in more than once
+#If you are creating more than one modal only include the ||miru.install(bot)|| section in one command as it will not work if it is loaded in more than once
 
 class Modal_View(miru.View):
     @miru.button(label='Your_Button_Label', style=hikari.ButtonStyle.SECONDARY)
