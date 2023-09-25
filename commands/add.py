@@ -17,5 +17,6 @@ async def message(event):
 async def add(ctx):
   sum = ctx.options.num1 + ctx.options.num2
   await ctx.respond(str(sum))
+#Creates the command ^
 
 #Coded by Velocity7
