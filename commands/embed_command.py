@@ -18,5 +18,6 @@ async def embed_command(ctx: lightbulb.Context) -> None:
     embed.set_thumbnail("https:https://example.com/")
     embed.set_footer('Your_Footer')
     await ctx.respond(embed)
+#Creates the embed ^
 
 #Coded by Velocity7

@@ -14,5 +14,6 @@ async def message(event):
 @lightbulb.implements(lightbulb.SlashCommand)
 async def ping(ctx):
     await ctx.respond('Your_Command_Response')
+#Creates the command ^
 
 #Coded by Velocity7
