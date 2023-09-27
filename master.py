@@ -11,7 +11,7 @@ bot = lightbulb.BotApp(token='YOUR_BOT_TOKEN',
 @bot.listen(hikari.StartedEvent)
 async def start(event):
  await bot.update_presence(status=hikari.Status.ONLINE)
-#Changes the bot status ||DND, IDLE, ONLINE|| ^
+#Changes the bot status ||DO_NOT_DISTURB, IDLE, ONLINE|| ^
 
 bot.load_extensions_from('./commands')
 #Loads Commands ^
