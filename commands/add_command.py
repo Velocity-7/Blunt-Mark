@@ -3,7 +3,7 @@ import lightbulb, hikari
 plugin = lightbulb.Plugin('add_command')
 
 def load(bot):
-  bot.add_command_plugin(plugin)
+  bot.add_plugin(plugin)
 
 @plugin.listener(hikari.GuildMessageCreateEvent)
 async def message(event):
@@ -15,7 +15,7 @@ async def message(event):
 @lightbulb.command('add', 'Add_2_numbers_ together')
 @lightbulb.implements(lightbulb.SlashCommand)
 async def add_command(ctx):
-  sum = ctx.options.num1 + ctx.options.num2
+  sum = ctx.options.num_1 + ctx.options.num_2
   await ctx.respond(str(sum))
 #Creates the command ^
 
