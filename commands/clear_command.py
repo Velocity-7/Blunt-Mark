@@ -1,6 +1,6 @@
 import lightbulb, hikari
 
-plugin = lightbulb.Plugin('clear_command')
+plugin = lightbulb.Plugin('clear_command'
 
 def load(bot):
   bot.add_plugin(plugin)
