@@ -1,6 +1,6 @@
 import lightbulb, hikari
 
-plugin = lightbulb.Plugin('add')
+plugin = lightbulb.Plugin('add_command')
 
 def load(bot):
   bot.add_plugin(plugin)
@@ -14,7 +14,7 @@ async def message(event):
 @lightbulb.option('num_2', 'Number_2',int)
 @lightbulb.command('add', 'Add_2_numbers_ together')
 @lightbulb.implements(lightbulb.SlashCommand)
-async def add(ctx):
+async def add_command(ctx):
   sum = ctx.options.num1 + ctx.options.num2
   await ctx.respond(str(sum))
 #Creates the command ^
