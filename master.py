@@ -1,5 +1,6 @@
 #Run 'python -m pip install -U hikari' before you start
 #Run 'pip install hikari-lightbulb' before you start
+#Run 'python -m pip install -U hikari-miru' before you start
 
 import lightbulb, hikari
 
