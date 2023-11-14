@@ -1,6 +1,6 @@
 import hikari, lightbulb, miru
 
-plugin = lightbulb.Plugin('modal')
+plugin = lightbulb.Plugin('modal_command')
 
 def load(bot):
     bot.add_plugin(plugin)
@@ -22,7 +22,7 @@ class Modal(miru.Modal):
 
 
 @plugin.command
-@lightbulb.command('modal', 'Your_Modal_Description')
+@lightbulb.command('your_modal_name_field', 'Your_Modal_Context_Field')
 @lightbulb.implements(lightbulb.SlashCommand)
 async def test(ctx):
     view = Modal_View()
