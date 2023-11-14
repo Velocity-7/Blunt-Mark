@@ -21,14 +21,14 @@ async def your_group_name(ctx):
 @lightbulb.implements(lightbulb.SlashSubCommand)
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def your_sub_command_name_2(ctx):
-    await ctx.respond('Your_Response_2')
+    await ctx.respond('Your_Response_1')
 #Creates the child sub-command ^
 
 @your_group_name.child
 @lightbulb.command('your_sub_command_name_field_2', 'Your_Sub_Command_Context_Field')
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def your_sub_command_name_2(ctx):
-    await ctx.respond('Your_Response')
+    await ctx.respond('Your_Response_2')
 #Creates the child sub-command ^
 
 #Coded by Velocity7
