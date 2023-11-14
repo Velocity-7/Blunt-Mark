@@ -3,7 +3,7 @@ import lightbulb, hikari
 plugin = lightbulb.Plugin('add_command')
 
 def load(bot):
-  bot.add_plugin(plugin)
+  bot.add_command_plugin(plugin)
 
 @plugin.listener(hikari.GuildMessageCreateEvent)
 async def message(event):
