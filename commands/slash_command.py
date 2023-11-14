@@ -12,7 +12,7 @@ async def message(event):
 @plugin.command
 @lightbulb.command('your_command_name', 'Your_Command_Description')
 @lightbulb.implements(lightbulb.SlashCommand)
-async def ping(ctx):
+async def slash_command(ctx):
     await ctx.respond('Your_Command_Response')
 #Creates the command ^
 
