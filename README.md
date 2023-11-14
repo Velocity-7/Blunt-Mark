@@ -8,3 +8,15 @@ Lightbulb Official documentation: https://hikari-lightbulb.readthedocs.io/
 Miru Official documentation: https://hikari-miru.readthedocs.io/
 
 Our Official Discord: https://discord.gg/CXYYXTDfrf
+
+
+## To start please run the following commands
+```
+python -m pip install -U hikari
+```
+```
+pip install hikari-lightbulb
+```
+```
+python -m pip install -U hikari-miru
+```
