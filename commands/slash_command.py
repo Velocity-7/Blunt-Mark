@@ -10,9 +10,9 @@ async def message(event):
   print(event.content)
 
 @plugin.command
-@lightbulb.command('your_command_name', 'Your_Command_Description')
+@lightbulb.command('your_command_name_field', 'Your_Command_Context_Field')
 @lightbulb.implements(lightbulb.SlashCommand)
-async def slash_command(ctx):
+async def your_slash_command_name(ctx):
     await ctx.respond('Your_Command_Response')
 #Creates the command ^
 
