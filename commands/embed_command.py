@@ -15,7 +15,7 @@ async def message(event):
 async def embed_command_name(ctx: lightbulb.Context) -> None:
     embed = hikari.Embed(title='Your_Title', description='Your_Description')
     embed.add_field('Your_Field_Name', 'Your_Field_Context')
-    embed.set_thumbnail("https://example.com/")
+    embed.set_thumbnail('https://example.com/')
     embed.set_footer('Your_Footer')
     await ctx.respond(embed)
 #Creates the embed ^
