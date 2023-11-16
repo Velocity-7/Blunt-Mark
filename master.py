@@ -6,7 +6,7 @@ import lightbulb, hikari
 
 bot = lightbulb.BotApp(token='YOUR_BOT_TOKEN',
 #Required ^                    
-    default_enabled_guilds=(YOUR_GUILD_ID)
+    default_enabled_guilds=(YOUR_GUILD_ID))
 #Too add more than one guild use: (YOUR_GUILD_ID, ANOTHER_GUILD_ID) | (Used for loading commands faster in guilds)
 
 @bot.listen(hikari.StartedEvent)
