@@ -12,11 +12,11 @@ Our Official Discord: https://discord.gg/CXYYXTDfrf
 
 ## To start please run the following commands
 ```
-python3 -m pip install -U hikari
+pip install -U hikari
 ```
 ```
-python3 -m pip install -U hikari-lightbulb
+pip install -U hikari-lightbulb
 ```
 ```
-python3 -m pip install -U hikari-miru==3.4.0
+pip install -U hikari-miru==3.4.0
 ```
