@@ -1,4 +1,4 @@
-import lightbulb, hikari
+import hikari, lightbulb
 
 plugin = lightbulb.Plugin('add_command')
 
