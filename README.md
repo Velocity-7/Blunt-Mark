@@ -18,5 +18,5 @@ python3 -m pip install -U hikari
 python3 -m pip install -U hikari-lightbulb
 ```
 ```
-python3 -m pip install -U hikari-miru
+python3 -m pip install -U hikari-miru==3.4.0
 ```
