@@ -1,4 +1,4 @@
-import lightbulb
+import hikari, lightbulb
 
 plugin = lightbulb.Plugin('ping_command')
 
