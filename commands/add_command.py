@@ -8,6 +8,7 @@ def load(bot):
 @plugin.listener(hikari.GuildMessageCreateEvent)
 async def message(event):
  print(event.content)
+#Helpful for debugging ^ 
 
 @plugin.command
 @lightbulb.option('num_1', 'Number_1',int)

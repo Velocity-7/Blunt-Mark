@@ -4,9 +4,9 @@
 
 import hikari, lightbulb
 
-bot = lightbulb.BotApp(token='YOUR_BOT_TOKEN', default_enabled_guilds=(YOUR_GUILD_ID))
+bot = lightbulb.BotApp(token='BOT_TOKEN', default_enabled_guilds=(GUILD_ID))
 #Required ^                    
-#Too add more than one guild use: (YOUR_GUILD_ID, ANOTHER_GUILD_ID) | (Used for loading commands faster in guilds)
+#Too add more than one guild use: (GUILD_ID_1, GUILD_ID_2) | (Used for loading commands faster in guilds)
 
 @bot.listen(hikari.StartedEvent)
 async def start(event):
@@ -14,7 +14,7 @@ async def start(event):
 #Changes the bot status ||DO_NOT_DISTURB, IDLE, ONLINE|| ^
 
 bot.load_extensions_from('./commands')
-#Loads Commands ^
+#Loads commands from given directory ^
     
 bot.run()
 

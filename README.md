@@ -20,3 +20,5 @@ pip install -U hikari-lightbulb
 ```
 pip install -U hikari-miru==3.4.0
 ```
+ 
+This code has NOT been updated for hikari-miru V4.0.

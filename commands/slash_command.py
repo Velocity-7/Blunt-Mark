@@ -8,12 +8,13 @@ def load(bot):
 @plugin.listener(hikari.GuildMessageCreateEvent)
 async def message(event):
  print(event.content)
+#Helpful for debugging ^ 
 
 @plugin.command
-@lightbulb.command('your_command_name_field', 'Your_Command_Context_Field')
+@lightbulb.command('slash_command_name', 'Slash_Command_Context')
 @lightbulb.implements(lightbulb.SlashCommand)
 async def your_slash_command_name(ctx):
- await ctx.respond('Your_Command_Response')
+ await ctx.respond('Slash_Command_Response')
 #Creates the command ^
 
 #Coded by Velocity7
