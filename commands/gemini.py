@@ -1,20 +1,18 @@
 import hikari, lightbulb, google.generativeai
 
-google.generativeai.configure(api_key='API_KEY')
-model = google.generativeai.GenerativeModel('gemini-1.5-flash')
-plugin = lightbulb.Plugin('gemini')
+google.generativeai.configure(api_key='AIzaSyAmORUF820NIvNyFQMJoMD_fA0ZqCQ7fRM')
+model = google.generativeai.GenerativeModel('gemini-3.1-flash-lite-preview')
+loader = lightbulb.Loader()
 
-def load(bot):
- bot.add_plugin(plugin)
 
-@plugin.command
-@lightbulb.add_checks(lightbulb.owner_only)
-@lightbulb.option('prompt', 'Enter a prompt')
-@lightbulb.command('gemini', 'Interact with Gemini')
-@lightbulb.implements(lightbulb.SlashCommand)
-async def clear(ctx):
- prompt = str(ctx.options.prompt)
- response = model.generate_content(f'{prompt}')
- await ctx.respond(response.text,  flags=hikari.MessageFlag.EPHEMERAL)
+@loader.command
+class Gemini(lightbulb.SlashCommand, name="gemini", description="Interact with Gemini"):
+    prompt = lightbulb.string("prompt", "Enter a prompt")
+
+    @lightbulb.invoke
+    async def invoke(self, ctx: lightbulb.Context) -> None:
+        prompt_str = str(self.prompt)
+        response = model.generate_content(f'Without using any bullet points or other formatting options strictly answer this keep it under 150 words: {prompt_str}')
+        await ctx.respond(response.text,  flags=hikari.MessageFlag.EPHEMERAL)
 
 #Coded by Velocity7

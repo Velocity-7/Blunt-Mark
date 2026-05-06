@@ -1,14 +1,11 @@
 import hikari, lightbulb
 
-plugin = lightbulb.Plugin('mail')
+loader = lightbulb.Loader()
 
-def load(bot):
- bot.add_plugin(plugin)
-
-@plugin.command
-@lightbulb.command('mail', 'Get our support email address')
-@lightbulb.implements(lightbulb.SlashCommand)
-async def mail(ctx):
- await ctx.respond('**Contact us for support at** `help.bluntmark@gmail.com`')
+@loader.command
+class Mail(lightbulb.SlashCommand, name="mail", description="Get our support email address"):
+    @lightbulb.invoke
+    async def invoke(self, ctx: lightbulb.Context) -> None:
+        await ctx.respond('**Contact us for support at** `help.bluntmark@gmail.com`')
 
 #Coded by Velocity7

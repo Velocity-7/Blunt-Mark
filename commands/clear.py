@@ -1,20 +1,17 @@
 import hikari, lightbulb
 
-plugin = lightbulb.Plugin('clear')
+loader = lightbulb.Loader()
 
-def load(bot):
- bot.add_plugin(plugin)
+@loader.command
+class Clear(lightbulb.SlashCommand, name="clear", description="Clear messages"):
+    lines = lightbulb.integer("lines", "Number of lines you want to delete")
 
-@plugin.command
-@lightbulb.add_checks(lightbulb.owner_only)
-@lightbulb.option('lines', 'Number of lines you want to delete',int)
-@lightbulb.command('clear', 'Clear messages')
-@lightbulb.implements(lightbulb.SlashCommand)
-async def clear(ctx):
- lines = int(ctx.options.lines)
- channel = str(ctx.channel_id)
- msgs = await ctx.bot.rest.fetch_messages(channel).limit(lines)
- await ctx.bot.rest.delete_messages(channel, msgs)
- await ctx.respond(f'Deleted {lines} lines.',  flags=hikari.MessageFlag.EPHEMERAL)
+    @lightbulb.invoke
+    async def invoke(self, ctx: lightbulb.Context) -> None:
+        lines = int(self.lines)
+        channel = str(ctx.channel_id)
+        msgs = await ctx.app.rest.fetch_messages(channel).limit(lines)
+        await ctx.app.rest.delete_messages(channel, msgs)
+        await ctx.respond(f'Deleted {lines} lines.', flags=hikari.MessageFlag.EPHEMERAL)
 
 #Coded by Velocity7
