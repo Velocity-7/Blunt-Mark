@@ -1,6 +1,6 @@
 import hikari, lightbulb, google.generativeai
 
-google.generativeai.configure(api_key='AIzaSyAmORUF820NIvNyFQMJoMD_fA0ZqCQ7fRM')
+google.generativeai.configure(api_key='AIzaSyA0QFz9Wsm21FRXwTBdNSDku-1_OdhHHR0')
 model = google.generativeai.GenerativeModel('gemini-3.1-flash-lite-preview')
 loader = lightbulb.Loader()
 
