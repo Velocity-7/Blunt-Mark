@@ -9,7 +9,7 @@ class SkUniversal(lightbulb.SlashCommand, name="universal", description="Downloa
     @lightbulb.invoke
     async def invoke(self, ctx: lightbulb.Context) -> None:
         embed = hikari.Embed(title='SK Launcher', description='Download the universal version of SK Launcher', colour='8E3986')
-        embed.add_field('Universal (**macOS+Linux+Windows**) Version', 'Click [**here**](https://skmedix.pl/binaries/skl/3.2.10/SKlauncher-3.2.10.jar) to start downloading :white_check_mark:')
+        embed.add_field('Universal (**macOS+Linux+Windows**) Version', 'Click [**here**](https://skmedix.pl/binaries/skl/3.2.18/SKlauncher-3.2.18.jar) to start downloading :white_check_mark:')
         embed.set_thumbnail('https://skmedix.pl/images/logo.png')
         await ctx.respond(embed)
 
@@ -18,7 +18,7 @@ class SkWindows(lightbulb.SlashCommand, name="windows", description="Download th
     @lightbulb.invoke
     async def invoke(self, ctx: lightbulb.Context) -> None:
         embed = hikari.Embed(title='SK Launcher', description='Download the Windows version of SK Launcher', colour='8E3986')
-        embed.add_field('Windows Version', 'Click [**here**](https://skmedix.pl/binaries/skl/3.2.10/x64/SKlauncher-3.2.10.exe) to start downloading :white_check_mark:')
+        embed.add_field('Windows Version', 'Click [**here**](https://skmedix.pl/binaries/skl/3.2.18/win-x64/SKlauncher-3.2.18_Setup.exe) to start downloading :white_check_mark:')
         embed.set_thumbnail('https://skmedix.pl/images/logo.png')
         await ctx.respond(embed)
 

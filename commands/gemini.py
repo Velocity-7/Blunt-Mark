@@ -1,9 +1,8 @@
-import hikari, lightbulb, google.generativeai
+import hikari, lightbulb, google.generativeai, os
 
-google.generativeai.configure(api_key='AIzaSyA0QFz9Wsm21FRXwTBdNSDku-1_OdhHHR0')
+google.generativeai.configure(api_key=os.environ.get('GEMINI_API_KEY'))
 model = google.generativeai.GenerativeModel('gemini-3.1-flash-lite-preview')
 loader = lightbulb.Loader()
-
 
 @loader.command
 class Gemini(lightbulb.SlashCommand, name="gemini", description="Interact with Gemini"):
