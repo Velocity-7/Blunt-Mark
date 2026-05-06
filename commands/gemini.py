@@ -1,7 +1,7 @@
-import hikari, lightbulb, google.generativeai, os
+import hikari, lightbulb, os
+from google import genai
 
-google.generativeai.configure(api_key=os.environ.get('GEMINI_API_KEY'))
-model = google.generativeai.GenerativeModel('gemini-3.1-flash-lite-preview')
+client = genai.Client(api_key=os.environ.get('GEMINI_API_KEY'))
 loader = lightbulb.Loader()
 
 @loader.command
@@ -11,7 +11,10 @@ class Gemini(lightbulb.SlashCommand, name="gemini", description="Interact with G
     @lightbulb.invoke
     async def invoke(self, ctx: lightbulb.Context) -> None:
         prompt_str = str(self.prompt)
-        response = model.generate_content(f'Without using any bullet points or other formatting options strictly answer this keep it under 150 words: {prompt_str}')
+        response = await client.aio.models.generate_content(
+            model='gemini-3.1-flash-lite-preview',
+            contents=f'Without using any bullet points or other formatting options strictly answer this keep it under 150 words: {prompt_str}'
+        )
         await ctx.respond(response.text,  flags=hikari.MessageFlag.EPHEMERAL)
 
 #Coded by Velocity7
