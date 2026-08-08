@@ -12,8 +12,7 @@ bot = hikari.GatewayBot(
     token=os.environ.get('TOKEN')
 )
 client = lightbulb.client_from_app(
-    bot,
-    default_enabled_guilds=(1040951775743713350, 1497603126981693510)
+    bot
 )
 
 @bot.listen(hikari.StartingEvent)

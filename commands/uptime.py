@@ -1,13 +1,13 @@
 import datetime, hikari, lightbulb
 
-record_time = datetime.datetime.utcnow()
+record_time = datetime.datetime.now(datetime.timezone.utc)
 loader = lightbulb.Loader()
 
 @loader.command
 class Uptime(lightbulb.SlashCommand, name="uptime", description="Check the bot uptime"):
     @lightbulb.invoke
     async def invoke(self, ctx: lightbulb.Context) -> None:
-        current_time = datetime.datetime.utcnow()
+        current_time = datetime.datetime.now(datetime.timezone.utc)
         uptime = current_time - record_time
         days = uptime.days
         hours, remainder = divmod(uptime.seconds, 3600)
