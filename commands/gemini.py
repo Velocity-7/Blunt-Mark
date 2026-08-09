@@ -14,7 +14,7 @@ class Gemini(lightbulb.SlashCommand, name="gemini", description="Interact with G
         prompt_str = str(self.prompt)
         try:
             response = await client.aio.models.generate_content(
-                model='gemini-3.1-flash-lite-preview',
+                model='gemini-3.6-flash',
                 contents=f'Strictly without using any bullet points or other formatting options answer this keep it under 150 words: {prompt_str}'
             )
             text = response.text
@@ -24,4 +24,4 @@ class Gemini(lightbulb.SlashCommand, name="gemini", description="Interact with G
         except Exception as e:
             await ctx.respond(f"An error occurred: {str(e)[:1900]}")
 
-#Coded by Velocity7 
+#Coded by Velocity7
