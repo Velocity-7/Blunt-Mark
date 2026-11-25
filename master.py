@@ -22,7 +22,7 @@ async def on_starting(event: hikari.StartingEvent) -> None:
 @bot.listen(hikari.StartedEvent)
 async def start(event: hikari.StartedEvent):
     await client.start()
-    await bot.update_presence(status=hikari.Status.IDLE, activity=hikari.Activity(name='Using Stable Firmware V4.7', type=hikari.ActivityType.CUSTOM))
+    await bot.update_presence(status=hikari.Status.DO_NOT_DISTURB, activity=hikari.Activity(name='Using Stable Firmware V4.7', type=hikari.ActivityType.CUSTOM))
 
 @client.error_handler
 async def errorhandler(exc: lightbulb.exceptions.ExecutionPipelineFailedException) -> bool:
